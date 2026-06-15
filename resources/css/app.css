@@ -106,6 +106,7 @@ a {
     z-index: 50;
     background: rgb(251 250 245 / 0.94);
     border-bottom: 1px solid rgb(222 216 200 / 0.85);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
 }
 
@@ -933,6 +934,7 @@ body {
     color: white;
     border-color: rgb(255 255 255 / 0.72);
     background: rgb(255 255 255 / 0.06);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 }
 
@@ -1239,7 +1241,7 @@ body {
 
 .page-hero {
     position: relative;
-    min-height: 310px;
+    min-height: clamp(400px, 32vw, 620px);
     padding: 0;
     overflow: hidden;
     background: var(--color-forest-deep);
@@ -1250,23 +1252,24 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 2;
     background:
-        linear-gradient(90deg, rgb(7 29 17 / 0.78) 0%, rgb(7 29 17 / 0.50) 45%, rgb(7 29 17 / 0.08) 100%),
-        linear-gradient(180deg, rgb(7 29 17 / 0.10), rgb(7 29 17 / 0.22));
+        linear-gradient(90deg, rgb(7 29 17 / 0.82) 0%, rgb(7 29 17 / 0.60) 38%, rgb(7 29 17 / 0.12) 72%, rgb(7 29 17 / 0.02) 100%),
+        linear-gradient(180deg, rgb(7 29 17 / 0.08), rgb(7 29 17 / 0.18));
 }
 
 .page-hero-grid {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     display: grid;
     grid-template-columns: 1fr;
-    min-height: 310px;
-    padding: 64px 0 54px;
+    min-height: clamp(400px, 32vw, 620px);
+    padding: 74px 0 64px;
     align-items: end;
 }
 
-.page-hero img {
+.page-hero > img,
+.page-hero-image {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -1274,9 +1277,10 @@ body {
     height: 100%;
     min-height: 0;
     object-fit: cover;
-    object-position: 62% 50%;
+    object-position: var(--page-hero-position, center center);
     border-radius: 0;
     box-shadow: none;
+    filter: none;
 }
 
 .page-hero-grid > div {
@@ -1367,6 +1371,18 @@ body {
         padding-right: 28px;
     }
 
+    .two-column,
+    .prose-grid,
+    .contact-grid,
+    .image-story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading,
+    .contact-details {
+        position: static;
+    }
+
     .contact-strip-grid,
     .contact-strip-grid > div,
     .contact-strip-grid > div:nth-child(2),
@@ -1442,14 +1458,18 @@ body {
 
     .page-hero,
     .page-hero-grid {
-        min-height: 260px;
+        min-height: 430px;
     }
 
     .page-hero-grid {
-        padding: 48px 0 38px;
+        padding: 54px 0 44px;
     }
 
     .page-hero h1 {
-        font-size: 2.55rem;
+        font-size: 2.8rem;
+    }
+
+    .page-hero-image {
+        object-position: 65% center;
     }
 }

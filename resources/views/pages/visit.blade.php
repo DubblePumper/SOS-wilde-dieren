@@ -1,5 +1,5 @@
 <x-layout :title="$meta['title']" :description="$meta['description']" :canonical="$meta['canonical']">
-    <x-page-hero title="Op bezoek" text="Je bent welkom om onze werking beter te leren kennen, met respect voor de rust van de dieren." image="hero-visit.jpg" alt="Rustig wandelpad langs groene opvanggebouwen in de natuur." />
+    <x-page-hero title="Op bezoek" text="Je bent welkom om onze werking beter te leren kennen, met respect voor de rust van de dieren." image="hero-wide-visit.jpg" alt="Rustig wandelpad langs groene opvanggebouwen in de natuur." />
 
     <section class="section">
         <div class="container prose-grid">

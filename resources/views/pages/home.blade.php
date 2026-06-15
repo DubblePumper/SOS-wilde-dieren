@@ -10,7 +10,7 @@
                 </div>
             </div>
             <figure class="hero-image">
-                <img src="{{ asset('images/hero-hedgehog.jpg') }}" alt="Egel in een rustige groene bosomgeving." width="816" height="250" fetchpriority="high">
+                <img src="{{ asset('images/hero-wide-home.jpg') }}" alt="Egel in een rustige groene bosomgeving." width="1915" height="821" fetchpriority="high">
             </figure>
         </div>
     </section>

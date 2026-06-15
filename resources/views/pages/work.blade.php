@@ -1,5 +1,5 @@
 <x-layout :title="$meta['title']" :description="$meta['description']" :canonical="$meta['canonical']">
-    <x-page-hero title="Wat doen wij?" text="We begeleiden wilde dieren van eerste hulp naar herstel en, wanneer het kan, terug naar de natuur." image="hero-kingfisher.jpg" alt="IJsvogel bij helder water in een natuurlijke omgeving." />
+    <x-page-hero title="Wat doen wij?" text="We begeleiden wilde dieren van eerste hulp naar herstel en, wanneer het kan, terug naar de natuur." image="hero-wide-work.jpg" alt="IJsvogel bij helder water in een natuurlijke omgeving." />
 
     <section class="section">
         <div class="container two-column">

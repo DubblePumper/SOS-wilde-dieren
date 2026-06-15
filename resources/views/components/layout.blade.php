@@ -7,7 +7,7 @@
 
 @php
     $canonicalUrl = $canonical ?? rtrim(config('sos.url'), '/').request()->getPathInfo();
-    $shareImage = $image ?? asset('images/hero-hedgehog.jpg');
+    $shareImage = $image ?? asset('images/hero-wide-home.jpg');
     $organizationSchema = [
         '@context' => 'https://schema.org',
         '@type' => ['Organization', 'LocalBusiness'],

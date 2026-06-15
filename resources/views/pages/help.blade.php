@@ -1,5 +1,5 @@
 <x-layout :title="$meta['title']" :description="$meta['description']" :canonical="$meta['canonical']">
-    <x-page-hero title="Hoe helpen?" text="Er zijn verschillende manieren waarop je SOS wilde dieren kan steunen." image="hero-songbird.jpg" alt="Kleine zangvogel op een tak tussen zachte groene bladeren." />
+    <x-page-hero title="Hoe helpen?" text="Er zijn verschillende manieren waarop je SOS wilde dieren kan steunen." image="hero-wide-help.jpg" alt="Kleine zangvogel op een tak tussen zachte groene bladeren." />
 
     <section class="section">
         <div class="container two-column">
