@@ -96,22 +96,22 @@ class PageController extends Controller
     private function workItems(): array
     {
         return [
-            ['title' => 'Opvang & redding', 'text' => 'We vangen en redden zieke, gewonde en hulpbehoevende wilde dieren.'],
-            ['title' => 'Verzorging & revalidatie', 'text' => 'Dieren krijgen rust, zorg en aangepaste voeding tot ze sterk genoeg zijn.'],
-            ['title' => 'Vrijlaten in de natuur', 'text' => 'Na herstel keren dieren terug naar hun natuurlijke leefomgeving.'],
-            ['title' => 'Bewustmaking', 'text' => 'We brengen mensen dichter bij wilde dieren en hun plaats in de natuur.'],
+            ['title' => 'Opvang & redding', 'icon' => 'rescue', 'image' => 'news-spechten.jpg', 'alt' => 'Twee jonge spechten op een tak.', 'text' => 'We halen dieren in nood op of ontvangen ze op ons centrum.'],
+            ['title' => 'Verzorging & revalidatie', 'icon' => 'care', 'image' => 'hero-hedgehog.jpg', 'alt' => 'Egel in een groene bosomgeving.', 'text' => 'We geven medische zorg, voeding en rust voor een volledig herstel.'],
+            ['title' => 'Vrijlaten in de natuur', 'icon' => 'release', 'image' => 'hero-kingfisher.jpg', 'alt' => 'IJsvogel bij helder water.', 'text' => 'Zodra een dier sterk genoeg is, laten we het terug vrij op een veilige plek.'],
+            ['title' => 'Bewustmaking', 'icon' => 'people', 'image' => 'hero-visit.jpg', 'alt' => 'Groene opvanggebouwen in de natuur.', 'text' => 'We informeren scholen, organisaties en het brede publiek over wilde dieren.'],
         ];
     }
 
     private function supportItems(): array
     {
         return [
-            ['id' => 'lid', 'title' => 'Word lid', 'text' => 'Steun ons met een jaarlijks lidmaatschap en help dieren in nood.'],
-            ['id' => 'gift', 'title' => 'Doe een gift', 'text' => 'Elke bijdrage helpt bij voeding, verzorging, materiaal en opvang.'],
-            ['id' => 'vrijwilliger', 'title' => 'Vrijwilliger worden', 'text' => 'Help mee achter de schermen, bij onderhoud of ondersteuning.'],
-            ['id' => 'materiaal', 'title' => 'Materiele steun', 'text' => 'Ook materiaal, voeding en praktische hulp maken verschil.'],
-            ['id' => 'testament', 'title' => 'Testament', 'text' => 'Neem SOS wilde dieren op in je nalatenschap.'],
-            ['id' => 'bedrijven', 'title' => 'Bedrijven', 'text' => 'Bedrijven kunnen helpen met sponsoring, materiaal of acties.'],
+            ['id' => 'lid', 'title' => 'Word lid', 'icon' => 'people', 'text' => 'Steun ons en word lid van SOS wilde dieren.'],
+            ['id' => 'gift', 'title' => 'Doe een gift', 'icon' => 'gift', 'text' => 'Elke bijdrage, groot of klein, maakt een verschil.'],
+            ['id' => 'vrijwilliger', 'title' => 'Vrijwilliger worden', 'icon' => 'leaf', 'text' => 'Sluit je aan als vrijwilliger in ons team.'],
+            ['id' => 'materiaal', 'title' => 'Materiele steun', 'icon' => 'rescue', 'text' => 'Doneer materiaal dat we goed kunnen gebruiken.'],
+            ['id' => 'testament', 'title' => 'Testament', 'icon' => 'care', 'text' => 'Neem SOS wilde dieren op in je testament.'],
+            ['id' => 'bedrijven', 'title' => 'Bedrijven', 'icon' => 'people', 'text' => 'Doe bedrijfsvrienden en ondersteun ons.'],
         ];
     }
 

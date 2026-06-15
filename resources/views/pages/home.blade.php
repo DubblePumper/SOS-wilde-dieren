@@ -17,32 +17,32 @@
 
     <x-contact-strip />
 
-    <section class="section section-open">
+    <section class="section section-open home-work">
         <div class="container two-column">
             <div class="section-heading">
-                <p>Onze zorg</p>
-                <h2>Van vondst tot vrijlating</h2>
+                <h2>Wat we doen</h2>
+                <p>Van opvangen tot terugkeren in de natuur.</p>
             </div>
-            <x-work-list :items="$workItems" />
+            <x-work-list :items="$workItems" :images="false" :links="false" />
         </div>
     </section>
 
-    <section class="section image-story">
+    <section class="section image-story found-animal">
         <div class="container image-story-grid">
-            <img src="{{ asset('images/section-fox.jpg') }}" alt="Vos in een rustige bosomgeving." width="169" height="169" loading="lazy">
+            <img src="{{ asset('images/hero-songbird.jpg') }}" alt="Kleine zangvogel op een tak in een groene omgeving." width="816" height="459" loading="lazy">
             <div>
-                <h2>Een dier gevonden?</h2>
-                <p>Blijf rustig, raak het dier zo weinig mogelijk aan en bel ons eerst. Zo kunnen we samen inschatten wat het veiligste is voor jou en voor het dier.</p>
-                <x-button-link href="{{ route('contact') }}">Neem contact op</x-button-link>
+                <h2>Een dier in nood gevonden?</h2>
+                <p>Bel ons altijd eerst. Samen beslissen we wat het beste is voor het dier.</p>
+                <x-button-link href="{{ route('contact') }}">Bel ons eerst {{ config('sos.phone') }}</x-button-link>
             </div>
         </div>
     </section>
 
-    <section class="section section-muted">
+    <section class="section section-muted home-support">
         <div class="container two-column">
             <div class="section-heading">
-                <p>Steun ons</p>
-                <h2>Help mee op een manier die bij je past</h2>
+                <h2>Hoe kan je helpen?</h2>
+                <p>Elke gift, elk uur en elk materiaal maakt onze zorg sterker.</p>
             </div>
             <x-support-list :items="$supportItems" />
         </div>
