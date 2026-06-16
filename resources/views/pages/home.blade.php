@@ -5,7 +5,7 @@
                 <h1>Samen voor wilde dieren</h1>
                 <p>SOS wilde dieren vangt en verzorgt zieke, gewonde en hulpbehoevende wilde dieren.</p>
                 <div class="hero-actions">
-                    <x-button-link href="{{ route('contact') }}">Bel ons eerst</x-button-link>
+                    <x-button-link href="tel:{{ config('sos.phone_href') }}">Bel ons eerst</x-button-link>
                     <x-button-link href="{{ route('work') }}" variant="secondary">Wat doen wij?</x-button-link>
                 </div>
             </div>
@@ -33,7 +33,7 @@
             <div>
                 <h2>Een dier in nood gevonden?</h2>
                 <p>Bel ons altijd eerst. Samen beslissen we wat het beste is voor het dier.</p>
-                <x-button-link href="{{ route('contact') }}">Bel ons eerst {{ config('sos.phone') }}</x-button-link>
+                <x-button-link href="tel:{{ config('sos.phone_href') }}">Bel ons eerst {{ config('sos.phone') }}</x-button-link>
             </div>
         </div>
     </section>
@@ -44,7 +44,7 @@
                 <h2>Hoe kan je helpen?</h2>
                 <p>Elke gift, elk uur en elk materiaal maakt onze zorg sterker.</p>
             </div>
-            <x-support-list :items="$supportItems" />
+            <x-support-list :items="$supportItems" variant="cards" />
         </div>
     </section>
 

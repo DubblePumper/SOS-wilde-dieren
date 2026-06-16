@@ -16,7 +16,7 @@
         <div class="container callout">
             <h2>Wil je gericht helpen?</h2>
             <p>Neem contact op. We vertellen graag welke hulp op dit moment het meest nodig is.</p>
-            <x-button-link href="{{ route('contact') }}">Contacteer ons</x-button-link>
+            <x-button-link href="{{ route('contact', ['topic' => 'Gift of steun']) }}#contact-form">Contacteer ons</x-button-link>
         </div>
     </section>
 </x-layout>

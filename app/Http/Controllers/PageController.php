@@ -56,6 +56,7 @@ class PageController extends Controller
     {
         return view('pages.contact', [
             'meta' => $this->meta('Contact', 'Neem contact op met SOS wilde dieren. Bel eerst bij een dier in nood.', '/contact'),
+            'subjectOptions' => $this->subjectOptions(),
         ]);
     }
 
@@ -106,12 +107,23 @@ class PageController extends Controller
     private function supportItems(): array
     {
         return [
-            ['id' => 'lid', 'title' => 'Word lid', 'icon' => 'people', 'text' => 'Steun ons en word lid van SOS wilde dieren.'],
-            ['id' => 'gift', 'title' => 'Doe een gift', 'icon' => 'gift', 'text' => 'Elke bijdrage, groot of klein, maakt een verschil.'],
-            ['id' => 'vrijwilliger', 'title' => 'Vrijwilliger worden', 'icon' => 'leaf', 'text' => 'Sluit je aan als vrijwilliger in ons team.'],
-            ['id' => 'materiaal', 'title' => 'Materiele steun', 'icon' => 'rescue', 'text' => 'Doneer materiaal dat we goed kunnen gebruiken.'],
-            ['id' => 'testament', 'title' => 'Testament', 'icon' => 'care', 'text' => 'Neem SOS wilde dieren op in je testament.'],
-            ['id' => 'bedrijven', 'title' => 'Bedrijven', 'icon' => 'people', 'text' => 'Doe bedrijfsvrienden en ondersteun ons.'],
+            ['id' => 'lid', 'title' => 'Word lid', 'icon' => 'people', 'href' => route('contact', ['topic' => 'Andere vraag']).'#contact-form', 'text' => 'Steun ons en word lid van SOS wilde dieren.'],
+            ['id' => 'gift', 'title' => 'Doe een gift', 'icon' => 'gift', 'href' => route('contact', ['topic' => 'Gift of steun']).'#contact-form', 'text' => 'Elke bijdrage, groot of klein, maakt een verschil.'],
+            ['id' => 'vrijwilliger', 'title' => 'Vrijwilliger worden', 'icon' => 'leaf', 'href' => route('contact', ['topic' => 'Vrijwilliger worden']).'#contact-form', 'text' => 'Sluit je aan als vrijwilliger in ons team.'],
+            ['id' => 'materiaal', 'title' => 'Materiele steun', 'icon' => 'rescue', 'href' => route('contact', ['topic' => 'Gift of steun']).'#contact-form', 'text' => 'Doneer materiaal dat we goed kunnen gebruiken.'],
+            ['id' => 'testament', 'title' => 'Testament', 'icon' => 'care', 'href' => route('contact', ['topic' => 'Andere vraag']).'#contact-form', 'text' => 'Neem SOS wilde dieren op in je testament.'],
+            ['id' => 'bedrijven', 'title' => 'Bedrijven', 'icon' => 'people', 'href' => route('contact', ['topic' => 'Gift of steun']).'#contact-form', 'text' => 'Doe bedrijfsvrienden en ondersteun ons.'],
+        ];
+    }
+
+    private function subjectOptions(): array
+    {
+        return [
+            'Dier in nood',
+            'Vrijwilliger worden',
+            'Gift of steun',
+            'Bezoek',
+            'Andere vraag',
         ];
     }
 

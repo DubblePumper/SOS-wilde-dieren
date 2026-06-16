@@ -16,7 +16,7 @@
                 <h3>Waar en wanneer?</h3>
                 <p>{{ config('sos.address') }}</p>
                 <p>{{ config('sos.opening_hours') }}</p>
-                <a href="{{ route('contact') }}">Maak een afspraak</a>
+                <a class="text-link" href="{{ route('contact', ['topic' => 'Bezoek']) }}#contact-form">Maak een afspraak</a>
             </aside>
         </div>
     </section>

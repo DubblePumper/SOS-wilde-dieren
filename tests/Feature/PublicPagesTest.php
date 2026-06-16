@@ -55,4 +55,17 @@ class PublicPagesTest extends TestCase
             ->assertOk()
             ->assertSee('Sitemap: https://www.sos-wildedieren.be/sitemap.xml');
     }
+
+    public function test_support_links_guide_visitors_to_the_right_contact_context(): void
+    {
+        $this->get('/hoe-helpen')
+            ->assertOk()
+            ->assertSee('/contact?topic=Gift%20of%20steun#contact-form', false)
+            ->assertSee('/contact?topic=Vrijwilliger%20worden#contact-form', false);
+
+        $this->get('/contact?topic=Bezoek')
+            ->assertOk()
+            ->assertSee('Je kwam hier terecht via')
+            ->assertSee('value="Bezoek" selected', false);
+    }
 }

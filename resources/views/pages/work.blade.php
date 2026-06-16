@@ -17,7 +17,10 @@
             <div>
                 <h2>Ook kleine dieren verdienen grote zorg</h2>
                 <p>Van vogels tot kleine zoogdieren: elk dier krijgt aangepaste verzorging. We bereiden dieren pas voor op vrijlating wanneer hun herstel dat toelaat.</p>
-                <x-button-link href="{{ route('help') }}">Help onze werking</x-button-link>
+                <div class="button-group">
+                    <x-button-link href="{{ route('help') }}">Help onze werking</x-button-link>
+                    <x-button-link href="tel:{{ config('sos.phone_href') }}" variant="secondary">Bel bij nood</x-button-link>
+                </div>
             </div>
         </div>
     </section>

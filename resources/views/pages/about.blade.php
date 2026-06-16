@@ -13,6 +13,7 @@
                 <p><strong>Bel ons eerst</strong><br><a href="tel:{{ config('sos.phone_href') }}">{{ config('sos.phone') }}</a></p>
                 <p>{{ config('sos.address') }}</p>
                 <p>{{ config('sos.opening_hours') }}</p>
+                <a class="text-link" href="{{ route('contact') }}">Contacteer ons</a>
             </aside>
         </div>
     </section>
